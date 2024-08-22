@@ -1,0 +1,5 @@
+github.com:
+    user: gavinhailey
+    git_protocol: ssh
+    users:
+        gavinhailey: {}
