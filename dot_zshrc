@@ -2,7 +2,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-autoload -Uz promptinit && promptinit && prompt powerlevel10k
 autoload -U +X compinit && compinit
 
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
@@ -10,7 +9,7 @@ antidote load
 
 zstyle ':omz:update' mode disabled
 # export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ENABLE_CORRECTION="false" 
 
