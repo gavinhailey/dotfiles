@@ -74,7 +74,7 @@ if command -v ngrok &>/dev/null; then
 fi
 
 ### chezmoi
-source <(chezmoi completions zsh)
+source <(chezmoi completion zsh)
 
 ### zsh
 source <(fzf --zsh)
