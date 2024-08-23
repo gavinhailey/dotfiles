@@ -14,7 +14,6 @@ plugins=(
   fzf-tab
   zsh-saml2aws
   zsh-osx-keychain
-  zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
   aws
