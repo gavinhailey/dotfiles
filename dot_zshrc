@@ -23,8 +23,6 @@ source $ZSH/oh-my-zsh.sh
 
 # user configuration
 
-## fzf
-
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
 ### disable sort when completing `git checkout`
@@ -61,6 +59,10 @@ eval "$(rbenv init - zsh)"
 ### rust
 export PATH=$PATH:/Users/$USER/.cargo/bin
 
+### golang
+export GOPATH="$HOME/.go"
+export GOBIN="$HOME/.local/bin"
+
 ## completions 
 
 ### saml2aws
@@ -70,6 +72,12 @@ eval "$(saml2aws --completion-script-zsh)"
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
+
+### chezmoi
+source <(chezmoi completions zsh)
+
+### zsh
+source <(fzf --zsh)
 
 ## aliases
 
@@ -90,17 +98,12 @@ alias monolith-rspec='saml2aws exec --exec-profile monolith -- bin/drake spring 
 alias docker-login='saml2aws exec --exec-profile=monolith -- aws ecr get-login-password | docker login --password-stdin --username AWS 264606497040.dkr.ecr.us-east-1.amazonaws.com'
 alias ecr='saml-monolith ./scripts/ecr.sh'
 
-### tsa
-alias tsa-stage='tlog-staging-admin'
-alias tsa-prod='tlog-prod-admin'
-
 ### colima
 export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
 alias colima-start="colima start --arch aarch64 --vm-type=vz --vz-rosetta --mount-type=virtiofs --cpu=4 --memory=8 --disk=120"
 alias colima-start-default="colima start --cpu=4 --memory=8 --disk=120"
 
 ## environment variables
-export EDITOR='nvim'
 export VISUAL='nvim'
 
 ### credentials
