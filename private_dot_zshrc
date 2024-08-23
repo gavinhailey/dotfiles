@@ -24,6 +24,8 @@ source $ZSH/oh-my-zsh.sh
 
 # user configuration
 
+## fzf
+
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
 ### disable sort when completing `git checkout`
@@ -60,10 +62,6 @@ eval "$(rbenv init - zsh)"
 ### rust
 export PATH=$PATH:/Users/$USER/.cargo/bin
 
-### go
-export GOPATH="$HOME/.go"
-export GOBIN="$HOME/.local/bin"
-
 ## completions 
 
 ### saml2aws
@@ -73,12 +71,6 @@ eval "$(saml2aws --completion-script-zsh)"
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
-
-### fzf
-source <(fzf --zsh)
-
-### chezmoi
-source <(chezmoi completions zsh)
 
 ## aliases
 
