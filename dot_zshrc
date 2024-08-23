@@ -93,16 +93,13 @@ source <(fzf --zsh)
 alias cat="bat"
 alias vim="nvim"
 alias vi="nvim"
-alias ls="eza"
+alias ls="eza -a"
 alias la="eza -al --git --no-user"
 alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
+alias zshrc="chezmoi edit ~/.zshrc --apply"
 
 ### saml2aws
-alias saml-login='saml2aws login --skip-prompt --session-duration=43200'
-alias drake='saml2aws exec --exec-profile monolith -- bin/drake'
-alias monolith-update='saml2aws exec --exec-profile monolith -- bin/drake update'
-alias monolith-rspec='saml2aws exec --exec-profile monolith -- bin/drake spring rspec'
 alias docker-login='saml2aws exec --exec-profile=monolith -- aws ecr get-login-password | docker login --password-stdin --username AWS 264606497040.dkr.ecr.us-east-1.amazonaws.com'
 alias ecr='saml-monolith ./scripts/ecr.sh'
 
