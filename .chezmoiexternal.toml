@@ -53,3 +53,10 @@
     exact = true
     stripComponents = 1
 
+[".config/nvim"]
+    type = "git-repo"
+    url = "git@github.com:gavinhailey/nvim-config.git"
+    refreshPeriod = "720h"
+    [".config/nvim".pull]
+        args = ["--ff-only"]
+
