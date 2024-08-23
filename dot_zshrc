@@ -2,6 +2,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
+autoload -U +X compinit && compinit
+
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
