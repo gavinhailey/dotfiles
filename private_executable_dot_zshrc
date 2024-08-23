@@ -159,7 +159,7 @@ function upaf-secret {
 # 1st param is retailer
 # 2nd param is the filename
 missingTlog() {
-  TAM_SLACK_TAG="@Carley Greive"
+  TAM_SLACK_TAG="@tbd"
   ICOPS_SLACK_TAG="@icops"
   CARE_SLACK_TAG="@liveteam"
 
