@@ -11,9 +11,10 @@ plugins=(
   poetry
   git
   gh
-  zsh-saml2aws
   fzf-tab
+  zsh-saml2aws
   zsh-osx-keychain
+  zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
   aws
@@ -25,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 
 ## fzf
 
+source <(fzf --zsh)
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
 ### disable sort when completing `git checkout`
