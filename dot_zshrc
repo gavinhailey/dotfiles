@@ -8,35 +8,9 @@ source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
 zstyle ':omz:update' mode disabled
-# export ZSH="$HOME/.oh-my-zsh"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-
 ENABLE_CORRECTION="false" 
 
-# plugins=(
-#   aliases
-#   alias-finder
-#   brew
-#   poetry
-#   docker
-#   git
-#   gitignore
-#   gh
-#   golang
-#   tmux
-#   terraform
-#   fzf-tab
-#   zsh-saml2aws
-#   zsh-osx-keychain
-#   zsh-autosuggestions
-#   zsh-syntax-highlighting
-#   aws
-# )
-#
-# source $ZSH/oh-my-zsh.sh
-#
 # user configuration
-
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
 ### disable sort when completing `git checkout`
