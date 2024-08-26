@@ -7,11 +7,11 @@ autoload -U +X compinit && compinit
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
+# defaults
 zstyle ':omz:update' mode disabled
 ENABLE_CORRECTION="false" 
-
-# user configuration
 export FZF_COMPLETION_OPTS='--border --info=inline'
+source <(fzf --zsh)
 
 ### disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
@@ -23,12 +23,13 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
 ## default editor for local and remote sessions
-
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='nvim'
 fi
+export VISUAL=$EDITOR
+
 
 ## development environment version managers
 
@@ -51,6 +52,7 @@ export PATH=$PATH:/Users/$USER/.cargo/bin
 export GOPATH="$HOME/.go"
 export GOBIN="$HOME/.local/bin"
 
+
 ## completions 
 
 ### saml2aws
@@ -65,7 +67,7 @@ fi
 source <(chezmoi completion zsh)
 
 ### zsh
-source <(fzf --zsh)
+
 
 ## aliases
 
@@ -89,7 +91,6 @@ alias colima-start="colima start --arch aarch64 --vm-type=vz --vz-rosetta --moun
 alias colima-start-default="colima start --cpu=4 --memory=8 --disk=120"
 
 ## environment variables
-export VISUAL='nvim'
 
 ### credentials
 export NPM_BASE=$(keychain-environment-variable NPM_BASE)
@@ -121,6 +122,7 @@ export PATH="/Users/gavin.hailey/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
+
 
 ## functions
 function merge-this-branch {
