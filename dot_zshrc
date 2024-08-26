@@ -2,16 +2,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# autoload -U +X compinit && compinit
-
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
+
+source <(fzf --zsh)
 
 # defaults
 zstyle ':omz:update' mode disabled
 ENABLE_CORRECTION="false" 
 export FZF_COMPLETION_OPTS='--border --info=inline'
-source <(fzf --zsh)
 
 ### disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
