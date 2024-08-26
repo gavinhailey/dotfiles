@@ -1,12 +1,12 @@
 jeffreytse/zsh-vi-mode
 zdharma-continuum/fast-syntax-highlighting kind:defer
 zsh-users/zsh-autosuggestions
-onyxraven/zsh-osx-keychain
-onyxraven/zsh-saml2aws
 Aloxaf/fzf-tab
 mattmc3/zfunctions
 mattmc3/ez-compinit
 zsh-users/zsh-completions
+onyxraven/zsh-osx-keychain
+onyxraven/zsh-saml2aws
 
 # oh-my-zsh
 getantidote/use-omz
