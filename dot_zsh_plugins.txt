@@ -4,7 +4,8 @@ zsh-users/zsh-autosuggestions
 onyxraven/zsh-osx-keychain
 onyxraven/zsh-saml2aws
 Aloxaf/fzf-tab
-# mattmc3/zfunctions
+mattmc3/zfunctions
+mattmc3/ez-compinit
 
 # oh-my-zsh
 getantidote/use-omz
