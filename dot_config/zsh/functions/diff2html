@@ -1,0 +1,4 @@
+diff2html() {
+    nvim -d "$@" -c TOhtml -c "w diff.html" -c 'qa!'
+}
+
