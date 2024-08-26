@@ -65,9 +65,6 @@ fi
 ### chezmoi
 source <(chezmoi completion zsh)
 
-### zsh
-
-
 ## aliases
 
 ### general
@@ -122,51 +119,6 @@ export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
-
-## functions
-function merge-this-branch {
-    BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    gh pr merge $BRANCH -s -d --auto -b ''
-}
-
-function diff-to-html {
-    nvim -d "$@" -c TOhtml -c "w diff.html" -c 'qa!'
-}
-
-function upaf-deploy {
-    ZONE=$1
-    npm run build:cacheless
-    PREFIX_ID=$ZONE CONFIRM=y sax "${ZONE}-stage" npm run deploy
-}
-
-function upaf-secret {
-    ZONE=$1
-    sax ops-prod -- kms-file-edit edit -f ./terraform/modules/runscope/secrets/ipn-upaf-$ZONE-stage.json.encrypted -k alias/runscope-execution-automation
-}
-
-# generate a missing TLOG message
-# 1st param is retailer
-# 2nd param is the filename
-missingTlog() {
-  TAM_SLACK_TAG="@tbd"
-  ICOPS_SLACK_TAG="@icops"
-  CARE_SLACK_TAG="@liveteam"
-
-  message=$(cat <<-END
-Hi $TAM_SLACK_TAG :wave:,
-
-We're missing a file from $1 today. We'd expect the file to look like \`$2\`. Would you please reach out and have them send the missing file? Thanks!
-
-cc: $ICOPS_SLACK_TAG $CARE_SLACK_TAG
-END
-)
-  echo "$message" | pbcopy
-}
-
-function prettify-json {
-    FILE=$1
-    jq . $FILE > "$FILE.tmp" && mv "$FILE.tmp" $FILE
-}
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
