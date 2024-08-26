@@ -6,6 +6,7 @@ onyxraven/zsh-saml2aws
 Aloxaf/fzf-tab
 mattmc3/zfunctions
 mattmc3/ez-compinit
+zsh-users/zsh-completions
 
 # oh-my-zsh
 getantidote/use-omz
