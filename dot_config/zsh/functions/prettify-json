@@ -1,0 +1,5 @@
+function prettify-json {
+    FILE=$1
+    jq . $FILE > "$FILE.tmp" && mv "$FILE.tmp" $FILE
+}
+
