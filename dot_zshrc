@@ -53,7 +53,7 @@ export GOPATH="$HOME/.go"
 export GOBIN="$HOME/.local/bin"
 
 ### terraform
-export PATH="$HOME/.tfenv/bin:$PATH"
+# export PATH="$HOME/.tfenv/bin:$PATH"
 
 
 ## completions 
