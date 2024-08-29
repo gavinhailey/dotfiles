@@ -114,9 +114,6 @@ export AWS_REGION=us-east-1
 export SAML2AWS_LOGIN_SESSION_DURATION=43200
 export SAML2AWS_SESSION_DURATION=3600
 
-### granted qol
-export GRANTED_ENABLE_AUTO_REASSUME=true
-
 #### tlog
 export KMS_ALIAS=alias/tlog-serverless-adapter-config-data
 
