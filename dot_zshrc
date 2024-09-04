@@ -6,12 +6,12 @@ fi
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
-source <(fzf --zsh)
-
-# defaults
+zstyle ':plugin:ez-compinit' 'compstyle' 'zshzoo'
 zstyle ':omz:update' mode disabled
 ENABLE_CORRECTION="false" 
 export FZF_COMPLETION_OPTS='--border --info=inline'
+
+source <(fzf --zsh)
 
 ### disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
