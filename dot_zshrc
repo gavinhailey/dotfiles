@@ -106,6 +106,7 @@ export POETRY_HTTP_BASIC_IBPYPI_USERNAME=$(keychain-environment-variable POETRY_
 export POETRY_HTTP_BASIC_IBPYPI_PASSWORD=$(keychain-environment-variable POETRY_HTTP_BASIC_REPO_PASSWORD)
 export RUNSCOPE_TOKEN=$(keychain-environment-variable RUNSCOPE_PAT)
 export NGROK_AUTH_TOKEN=$(keychain-environment-variable NGROK_AUTH_TOKEN)
+export GITHUB_TOKEN=$(keychain-environment-variable GITHUB_TOKEN)
 
 ### saml2aws qol
 export AWS_FEDERATION_TOKEN_TTL=12h
