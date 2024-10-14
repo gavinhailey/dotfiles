@@ -71,6 +71,9 @@ fi
 ### chezmoi
 source <(chezmoi completion zsh)
 
+### moon
+source <(moon completions)
+
 ## aliases
 
 ### general
