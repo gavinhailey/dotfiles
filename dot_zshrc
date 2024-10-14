@@ -107,6 +107,8 @@ export POETRY_HTTP_BASIC_IBPYPI_PASSWORD=$(keychain-environment-variable POETRY_
 export RUNSCOPE_TOKEN=$(keychain-environment-variable RUNSCOPE_PAT)
 export NGROK_AUTH_TOKEN=$(keychain-environment-variable NGROK_AUTH_TOKEN)
 export GITHUB_PAT=$(keychain-environment-variable GITHUB_TOKEN)
+export DD_API_KEY=$(keychain-environment-variable DD_API_KEY)
+export DD_APP_KEY=$(keychain-environment-variable DD_APP_KEY)
 
 ### saml2aws qol
 export AWS_FEDERATION_TOKEN_TTL=12h
@@ -125,6 +127,7 @@ export PATH="/Users/gavin.hailey/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
+export PATH="/Users/gavin.hailey/.moon/bin:$PATH"
 
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
