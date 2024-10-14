@@ -58,21 +58,6 @@ export GOBIN="$HOME/.local/bin"
 # export PATH="$HOME/.tfenv/bin:$PATH"
 
 
-## completions 
-
-### saml2aws
-eval "$(saml2aws --completion-script-zsh)"
-
-### ngrok
-if command -v ngrok &>/dev/null; then
-  eval "$(ngrok completion)"
-fi
-
-### chezmoi
-source <(chezmoi completion zsh)
-
-### moon
-source <(moon completions)
 
 ## aliases
 
@@ -132,6 +117,22 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 export PATH="/Users/gavin.hailey/.moon/bin:$PATH"
 
+
+## completions 
+
+### saml2aws
+eval "$(saml2aws --completion-script-zsh)"
+
+### ngrok
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
+
+### chezmoi
+source <(chezmoi completion zsh)
+
+### moon
+source <(moon completions)
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
