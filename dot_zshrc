@@ -150,3 +150,12 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+function aftercolon() {
+  compset -P '*:'                   # strip stuff up to last :
+  compset -S ':*'                   # strip stuff after next colon
+  _default -r '\-\n\t /:' "$@"      # do default completion on this
+}
+
+compdef aftercolon assume
+
