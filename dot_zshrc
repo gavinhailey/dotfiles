@@ -54,6 +54,9 @@ export PATH=$PATH:/Users/$USER/.cargo/bin
 export GOPATH="$HOME/.go"
 export GOBIN="$HOME/.local/bin"
 
+### deno
+. "/Users/gavin.hailey/.deno/env"
+
 ### terraform
 # export PATH="$HOME/.tfenv/bin:$PATH"
 
@@ -150,4 +153,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
 
