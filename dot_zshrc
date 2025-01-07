@@ -84,6 +84,7 @@ alias colima-start="colima start --arch aarch64 --vm-type=vz --vz-rosetta --moun
 alias colima-start-default="colima start --cpu=4 --memory=8 --disk=120"
 
 ## environment variables
+export ZLE_RPROMPT_INDENT=0
 
 ### credentials
 export NPM_BASE=$(keychain-environment-variable NPM_BASE)
