@@ -97,7 +97,6 @@ export MASTER_GENERATOR_LOGIN=$(keychain-environment-variable MASTER_GENERATOR_L
 export POETRY_HTTP_BASIC_IBPYPI_USERNAME=$(keychain-environment-variable POETRY_HTTP_BASIC_REPO_USERNAME)
 export POETRY_HTTP_BASIC_IBPYPI_PASSWORD=$(keychain-environment-variable POETRY_HTTP_BASIC_REPO_PASSWORD)
 export RUNSCOPE_TOKEN=$(keychain-environment-variable RUNSCOPE_PAT)
-export NGROK_AUTH_TOKEN=$(keychain-environment-variable NGROK_AUTH_TOKEN)
 export GITHUB_PAT=$(keychain-environment-variable GITHUB_TOKEN)
 export DD_API_KEY=$(keychain-environment-variable DD_API_KEY)
 export DD_APP_KEY=$(keychain-environment-variable DD_APP_KEY)
