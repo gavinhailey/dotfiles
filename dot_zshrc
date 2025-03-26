@@ -33,28 +33,6 @@ fi
 export VISUAL=$EDITOR
 
 
-## development environment version managers
-
-### uv
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
-
-### jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-### rbenv
-eval "$(rbenv init - zsh)"
-
-### rust
-export PATH=$PATH:/Users/$USER/.cargo/bin
-
-### golang
-export GOPATH="$HOME/.go"
-export GOBIN="$HOME/.local/bin"
-
-### deno
-. "/Users/gavin.hailey/.deno/env"
 
 ### terraform
 # export PATH="$HOME/.tfenv/bin:$PATH"
@@ -138,12 +116,34 @@ source <(moon completions)
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+## development environment version managers
+
+### uv
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+
+### jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+### rbenv
+eval "$(rbenv init - zsh)"
+
+### rust
+export PATH=$PATH:/Users/$USER/.cargo/bin
+
+### golang
+export GOPATH="$HOME/.go"
+export GOBIN="$HOME/.local/bin"
+
+### deno
+. "/Users/gavin.hailey/.deno/env"
+
 ### nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-eval "$(zoxide init zsh --cmd cd --hook pwd)"
 
 # pnpm
 export PNPM_HOME="/Users/gavin.hailey/Library/pnpm"
@@ -153,5 +153,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-
+# zoxide
+eval "$(zoxide init zsh --cmd cd --hook pwd)"
 
