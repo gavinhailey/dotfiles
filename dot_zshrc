@@ -103,6 +103,9 @@ export PATH="/Users/gavin.hailey/.moon/bin:$PATH"
 ### saml2aws
 eval "$(saml2aws --completion-script-zsh)"
 
+### lefthook
+eval "$(lefthook completion zsh)"
+
 ### ngrok
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
