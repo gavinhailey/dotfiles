@@ -10,6 +10,7 @@ zstyle ':omz:update' mode disabled
 ENABLE_CORRECTION="false" 
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
+zstyle ':antidote:bundle' use-friendly-names 'yes'
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
