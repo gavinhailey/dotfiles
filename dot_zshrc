@@ -10,7 +10,6 @@ zstyle ':omz:update' mode disabled
 ENABLE_CORRECTION="false" 
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
-zstyle ':antidote:bundle' use-friendly-names 'yes'
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
@@ -32,13 +31,6 @@ else
   export EDITOR='nvim'
 fi
 export VISUAL=$EDITOR
-
-
-
-### terraform
-# export PATH="$HOME/.tfenv/bin:$PATH"
-
-
 
 ## aliases
 
@@ -132,6 +124,9 @@ eval "$(jenv init -)"
 
 ### rbenv
 eval "$(rbenv init - zsh)"
+
+### terraform
+# export PATH="$HOME/.tfenv/bin:$PATH"
 
 ### rust
 export PATH=$PATH:/Users/$USER/.cargo/bin
