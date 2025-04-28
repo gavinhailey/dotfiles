@@ -99,6 +99,9 @@ eval "$(saml2aws --completion-script-zsh)"
 ### lefthook
 eval "$(lefthook completion zsh)"
 
+### zdf
+eval "$(zdf completion zsh)"
+
 ### ngrok
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
