@@ -70,6 +70,7 @@ export RUNSCOPE_TOKEN=$(keychain-environment-variable RUNSCOPE_PAT)
 export GITHUB_TOKEN=$(keychain-environment-variable GITHUB_TOKEN)
 export DD_API_KEY=$(keychain-environment-variable DD_API_KEY)
 export DD_APP_KEY=$(keychain-environment-variable DD_APP_KEY)
+export GEMINI_API_KEY=$(keychain-environment-variable GEMINI_API_KEY)
 
 ### saml2aws qol
 export AWS_FEDERATION_TOKEN_TTL=12h
