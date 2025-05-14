@@ -97,11 +97,11 @@ export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 export PATH="$HOME/.moon/bin:$PATH"
 
 ### brewfile sync
-export CHEZMOI_BUNDLE_FILE="$(chezmoi source-path)/Brewfile"
+export CHEZMOI_BREWFILE="$(chezmoi source-path)/Brewfile"
 function brew() {
-  brew "$@"
-  brew bundle dump --force --file="$CHEZMOI_BUNDLE_FILE" --quiet
-  chezmoi apply "$HOME/Brewfile" --quiet
+  command brew "$@"
+  command brew bundle dump --force --file="$CHEZMOI_BREWFILE" --quiet
+  command chezmoi apply "$HOME/Brewfile" --no-tty
 }
 
 ## completions 
