@@ -1,0 +1,6 @@
+eval $(/opt/homebrew/bin/brew shellenv)
+
+{{- if eq .host "personal" }}
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+{{- end }}
+
