@@ -18,14 +18,14 @@
     "calt": false
   },
   "inlay_hints": {
-    "enabled": false,
-    "show_type_hints": true,
+    "enabled": true,
+    "show_type_hints": false,
     "show_parameter_hints": true,
     "show_other_hints": true
   },
   "soft_wrap": "editor_width",
   "terminal": {
-    "font_family": "MesloLGS NF",
+    "font_family": "MesloLGS Nerd Font",
     "font_size": 13,
     "working_directory": "current_project_directory"
   }
