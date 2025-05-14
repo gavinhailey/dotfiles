@@ -44,8 +44,10 @@ alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
+{{- if eq .host "work" }}
 ### copilot
 eval "$(gh copilot alias -- zsh)"
+{{- end }}
 
 ### saml2aws
 alias docker-login='assume monolith-production:DomainEngineer -- aws ecr get-login-password | docker login --password-stdin --username AWS 264606497040.dkr.ecr.us-east-1.amazonaws.com'
@@ -104,8 +106,10 @@ eval "$(saml2aws --completion-script-zsh)"
 ### lefthook
 eval "$(lefthook completion zsh)"
 
+{{- if eq .host "work" }}
 ### zdf
 zdf completion zsh > "${fpath[1]}/_zdf"
+{{- end }}
 
 ### ngrok
 if command -v ngrok &>/dev/null; then
@@ -147,9 +151,6 @@ export PATH=$PATH:/Users/$USER/.cargo/bin
 ### golang
 export GOPATH="$HOME/.go"
 export GOBIN="$HOME/.local/bin"
-
-### deno
-. "/Users/gavin.hailey/.deno/env"
 
 ### nvm
 export NVM_DIR="$HOME/.nvm"
