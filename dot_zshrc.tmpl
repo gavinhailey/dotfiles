@@ -96,6 +96,14 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 export PATH="$HOME/.moon/bin:$PATH"
 
+### brewfile sync
+export CHEZMOI_BUNDLE_FILE="$(chezmoi source-path)/Brewfile"
+function brew() {
+  brew "$@"
+  brew bundle dump --force --file="$CHEZMOI_BUNDLE_FILE" --quiet
+  chezmoi apply "$HOME/Brewfile" --quiet
+}
+
 ## completions 
 
 ### saml2aws
@@ -155,7 +163,6 @@ export GOBIN="$HOME/.local/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 
 # pnpm
 export PNPM_HOME="/Users/gavin.hailey/Library/pnpm"
