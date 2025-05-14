@@ -44,8 +44,10 @@ alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
+### copilot
+eval "$(gh copilot alias -- zsh)"
+
 ### saml2aws
-alias ecr='saml-monolith ./scripts/ecr.sh'
 
 ### colima
 export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
