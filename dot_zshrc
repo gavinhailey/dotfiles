@@ -74,7 +74,7 @@ export DD_API_KEY=$(keychain-environment-variable DD_API_KEY)
 export DD_APP_KEY=$(keychain-environment-variable DD_APP_KEY)
 export GOOGLE_API_KEY=$(keychain-environment-variable GEMINI_API_KEY)
 
-### saml2aws qol
+### aws qol
 export AWS_FEDERATION_TOKEN_TTL=12h
 export AWS_ASSUME_ROLE_TTL=1h
 export AWS_DEFAULT_REGION=us-east-1
@@ -83,16 +83,12 @@ export AWS_REGION=us-east-1
 export SAML2AWS_LOGIN_SESSION_DURATION=43200
 export SAML2AWS_SESSION_DURATION=3600
 
-#### tlog
-export KMS_ALIAS=alias/tlog-serverless-adapter-config-data
-
 ### path stuffs
-export PATH="/Users/gavin.hailey/.local/bin:$PATH"
+export PATH="~/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
-export PATH="/Users/gavin.hailey/.moon/bin:$PATH"
-
+export PATH="~/.moon/bin:$PATH"
 
 ## completions 
 
@@ -115,6 +111,8 @@ source <(chezmoi completion zsh)
 
 ### moon
 source <(moon completions)
+
+## powerlevel10k
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
