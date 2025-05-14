@@ -84,11 +84,11 @@ export SAML2AWS_LOGIN_SESSION_DURATION=43200
 export SAML2AWS_SESSION_DURATION=3600
 
 ### path stuffs
-export PATH="~/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
-export PATH="~/.moon/bin:$PATH"
+export PATH="$HOME/.moon/bin:$PATH"
 
 ## completions 
 
