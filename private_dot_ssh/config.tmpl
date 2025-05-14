@@ -1,3 +1,4 @@
+{{- if eq .host "work" }}
 Include /Users/gavin.hailey/.colima/ssh_config
 
 Host sftp*.ibotta.com sftp.ibotta.com
@@ -20,4 +21,9 @@ Host github.com
   AddKeysToAgent yes
   HostName github.com
   IdentityFile ~/.ssh/id_ed25519
+{{- end }}
+
+{{- if eq .host "personal" }}
+
+{{- end }}
 
