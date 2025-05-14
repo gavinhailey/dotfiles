@@ -59,6 +59,7 @@ alias colima-start-default="colima start --cpu=4 --memory=8 --disk=120"
 export ZLE_RPROMPT_INDENT=0
 
 ### credentials
+{{- if eq .host "work" }}
 export NPM_BASE=$(keychain-environment-variable NPM_BASE)
 export NPM_REPO_USERNAME=$(keychain-environment-variable NPM_REPO_USERNAME)
 export NPM_REPO_PASSWORD=$(keychain-environment-variable NPM_REPO_PASSWORD)
@@ -73,6 +74,11 @@ export GITHUB_CLASSIC_TOKEN=$(keychain-environment-variable GITHUB_TOKEN)
 export DD_API_KEY=$(keychain-environment-variable DD_API_KEY)
 export DD_APP_KEY=$(keychain-environment-variable DD_APP_KEY)
 export GOOGLE_API_KEY=$(keychain-environment-variable GEMINI_API_KEY)
+{{- end }}
+
+{{- if eq .host "personal" }}
+
+{{- end }}
 
 ### aws qol
 export AWS_FEDERATION_TOKEN_TTL=12h
