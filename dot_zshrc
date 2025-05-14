@@ -44,9 +44,11 @@ alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
+### copilot
+eval "$(gh copilot alias -- zsh)"
+
 ### saml2aws
-alias docker-login='saml2aws exec --exec-profile=monolith -- aws ecr get-login-password | docker login --password-stdin --username AWS 264606497040.dkr.ecr.us-east-1.amazonaws.com'
-alias ecr='saml-monolith ./scripts/ecr.sh'
+alias docker-login='assume monolith-production:DomainEngineer -- aws ecr get-login-password | docker login --password-stdin --username AWS 264606497040.dkr.ecr.us-east-1.amazonaws.com'
 
 ### colima
 export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
