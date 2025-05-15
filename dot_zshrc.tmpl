@@ -47,6 +47,9 @@ alias zshrc="chezmoi edit ~/.zshrc --apply"
 {{- if eq .host "work" }}
 ### copilot
 eval "$(gh copilot alias -- zsh)"
+
+### assume
+alias assume="source /usr/local/bin/assume"
 {{- end }}
 
 ### saml2aws
