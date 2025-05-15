@@ -107,11 +107,6 @@ eval "$(saml2aws --completion-script-zsh)"
 ### lefthook
 eval "$(lefthook completion zsh)"
 
-{{- if eq .host "work" }}
-### zdf
-zdf completion zsh > "${fpath[1]}/_zdf"
-{{- end }}
-
 ### ngrok
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
