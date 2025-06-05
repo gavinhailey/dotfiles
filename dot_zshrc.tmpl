@@ -107,6 +107,10 @@ eval "$(saml2aws --completion-script-zsh)"
 ### lefthook
 eval "$(lefthook completion zsh)"
 
+### switch
+source <(switcher init zsh)
+source <(switch completion zsh)
+
 ### ngrok
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
