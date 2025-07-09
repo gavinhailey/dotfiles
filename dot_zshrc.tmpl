@@ -147,11 +147,15 @@ eval "$(rbenv init - zsh)"
 # export PATH="$HOME/.tfenv/bin:$PATH"
 
 ### rust
-export PATH=$PATH:/Users/$USER/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 ### golang
 export GOPATH="$HOME/.go"
 export GOBIN="$HOME/.local/bin"
+
+### bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$PATH:$BUN_INSTALL/bin"
 
 ### nvm
 export NVM_DIR="$HOME/.nvm"
