@@ -2,6 +2,9 @@
   "selectedAuthType": "gemini-api-key",
   "theme": "Default",
   "contextFileName": "AGENTS.md",
+  "checkpointing": {
+    "enabled": true
+  },
   "autoAccept": true,
   "mcpServers": {
     "sequential-thinking": {
