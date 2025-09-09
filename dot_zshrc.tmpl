@@ -80,7 +80,7 @@ export DD_APP_KEY=$(keychain-environment-variable DD_APP_KEY)
 export GEMINI_API_KEY=$(keychain-environment-variable GEMINI_API_KEY)
 export GOOGLE_API_KEY=$(keychain-environment-variable GEMINI_API_KEY)
 export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
-export ATLASSIAN_PAT=$(keychain-environment-variable ATLASSIAN_PAT)
+export ATLASSIAN_PAT=$(keychain-environment-variable ATLASSIAN_PAT_P1)${keychain-environment-variable ATLASSIAN_PAT_P2}
 {{- end }}
 
 {{- if eq .host "personal" }}
