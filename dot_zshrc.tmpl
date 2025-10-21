@@ -64,6 +64,8 @@ export ZLE_RPROMPT_INDENT=0
 
 ### credentials
 {{- if eq .host "work" }}
+export ARTIFACTORY_USER=$(keychain-environment-variable ARTIFACTORY_USER)
+export ARTIFACTORY_TOKEN=$(keychain-environment-variable ARTIFACTORY_TOKEN)
 export NPM_BASE=$(keychain-environment-variable NPM_BASE)
 export NPM_REPO_USERNAME=$(keychain-environment-variable NPM_REPO_USERNAME)
 export NPM_REPO_PASSWORD=$(keychain-environment-variable NPM_REPO_PASSWORD)
