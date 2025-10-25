@@ -133,10 +133,6 @@ source <(chezmoi completion zsh)
 ### moon
 source <(moon completions)
 
-## powerlevel10k
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 ## development environment version managers
 
 ### mise
@@ -187,4 +183,7 @@ esac
 
 # zoxide
 eval "$(zoxide init zsh --cmd cd --hook pwd)"
+
+# starship
+eval "$(starship init zsh)"
 
