@@ -133,24 +133,14 @@ source <(chezmoi completion zsh)
 ### moon
 source <(moon completions)
 
-## development environment version managers
+## development environment
 
 ### mise
-eval "$(mise activate bash)"
+eval "$(mise activate zsh)"
 
 ### uv
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
-
-### jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-### rbenv
-eval "$(rbenv init - zsh)"
-
-### terraform
-# export PATH="$HOME/.tfenv/bin:$PATH"
 
 ### rust
 export PATH=$PATH:$HOME/.cargo/bin
