@@ -56,8 +56,7 @@ alias docker-login='assume monolith-production:DomainEngineer -- aws ecr get-log
 
 ### colima
 export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
-alias colima-start="colima start --arch aarch64 --vm-type=vz --vz-rosetta --mount-type=virtiofs --cpu=4 --memory=8 --disk=120"
-alias colima-start-default="colima start --cpu=4 --memory=8 --disk=120"
+export DOCKER_API_VERSION=1.43
 
 ## environment variables
 export ZLE_RPROMPT_INDENT=0
