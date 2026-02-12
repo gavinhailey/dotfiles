@@ -90,6 +90,7 @@ export JIRA_URL=$(keychain-environment-variable ATLASSIAN_URL)
 export CONFLUENCE_URL=$(keychain-environment-variable ATLASSIAN_URL)/wiki
 export ANTHROPIC_AUTH_TOKEN=$(keychain-environment-variable DATABRICKS_TOKEN)
 export ANTHROPIC_BASE_URL=$(keychain-environment-variable DATABRICKS_SERVING_ENDPOINT)
+export CONTEXT7_API_KEY=$(keychain-environment-variable CONTEXT7_API_KEY)
 {{- end }}
 
 {{- if eq .host "personal" }}
