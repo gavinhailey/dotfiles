@@ -46,11 +46,6 @@ alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
-{{- if eq .host "work" }}
-### copilot
-eval "$(gh copilot alias -- zsh)"
-{{- end }}
-
 ### saml2aws
 
 ### colima
