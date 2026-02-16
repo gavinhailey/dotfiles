@@ -46,11 +46,6 @@ alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
-{{- if eq .host "work" }}
-### copilot
-eval "$(gh copilot alias -- zsh)"
-{{- end }}
-
 ### saml2aws
 alias docker-login='assume monolith-production:DomainEngineer -- aws ecr get-login-password | docker login --password-stdin --username AWS 264606497040.dkr.ecr.us-east-1.amazonaws.com'
 
