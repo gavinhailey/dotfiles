@@ -2,6 +2,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# environment variables
+export ZLE_RPROMPT_INDENT=0
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOREFRESH=true
+export ZSH_TMUX_DEFAULT_SESSION_NAME=main
+
 zstyle ':completion:*' completer _complete _ignored _approximate
 autoload -Uz compinit
 compinit
@@ -51,12 +57,6 @@ alias zshrc="chezmoi edit ~/.zshrc --apply"
 ### colima
 export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
 export DOCKER_API_VERSION=1.43
-
-## environment variables
-export ZLE_RPROMPT_INDENT=0
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOREFRESH=true
-export ZSH_TMUX_DEFAULT_SESSION_NAME=main
 
 ### credentials
 {{- if eq .host "work" }}
