@@ -55,7 +55,9 @@ export DOCKER_API_VERSION=1.43
 
 ## environment variables
 export ZLE_RPROMPT_INDENT=0
-export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOREFRESH=true
+export ZSH_TMUX_DEFAULT_SESSION_NAME=main
 
 ### credentials
 {{- if eq .host "work" }}
