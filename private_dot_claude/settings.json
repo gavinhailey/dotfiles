@@ -1,7 +1,8 @@
 {
   "model": "opus",
   "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "_ZO_DOCTOR": "0"
   },
   "teammateMode": "tmux",
   "enabledPlugins": {
@@ -12,6 +13,7 @@
     "code-simplifier@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
+    "compound-engineering@every-marketplace": true,
     "gopls-lsp@claude-plugins-official": true
   },
   "sandbox": {
@@ -36,7 +38,9 @@
       "WebSearch",
       "Task",
       "Bash(acli:*)",
-      "Bash(gh:*)"
+      "Bash(gh:*)",
+      "Bash(terraform-docs:*)",
+      "Bash(biome:*)"
     ]
   },
   "alwaysThinkingEnabled": true,
