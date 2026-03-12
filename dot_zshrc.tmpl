@@ -16,6 +16,12 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
+if [[ "$(uname)" == "Darwin" ]]; then 
+  zvm_after_init_commands+=('source <(fzf --zsh) ') # MacOS
+else
+  zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh') # Linux
+fi
+
 export GPG_TTY=$(tty)
 
 ### disable sort when completing `git checkout`
@@ -165,8 +171,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh --cmd cd --hook pwd)"
