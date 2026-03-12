@@ -16,8 +16,6 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
-FZF_CTRL_R_COMMAND= FZF_ALT_C_COMMAND= source <(fzf --zsh)
-
 export GPG_TTY=$(tty)
 
 ### disable sort when completing `git checkout`
@@ -167,6 +165,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh --cmd cd --hook pwd)"
