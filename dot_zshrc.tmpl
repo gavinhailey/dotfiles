@@ -16,7 +16,7 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
-source <(fzf --zsh)
+FZF_CTRL_R_COMMAND= FZF_ALT_C_COMMAND= source <(fzf --zsh)
 
 export GPG_TTY=$(tty)
 
