@@ -10,15 +10,15 @@
       "Glob",
       "Edit(~/Ibotta/**)",
       "Edit(~/.agents/**)",
+      "Edit(~/.claude/**)",
       "Write(~/Ibotta/**)",
       "Write(~/.agents/**)",
+      "Write(~/.claude/**)",
       "WebFetch",
       "WebSearch",
       "Task",
       "Bash(acli:*)",
-      "Bash(gh:*)",
-      "Bash(terraform-docs:*)",
-      "Bash(biome:*)"
+      "Bash(gh:*)"
     ]
   },
   "model": "opus",
@@ -39,7 +39,18 @@
     "allowUnsandboxedCommands": false,
     "network": {
       "allowedDomains": [
-        "github.com"
+        "github.com",
+        "api.github.com",
+        "registry.npmjs.org",
+        "pypi.org",
+        "files.pythonhosted.org",
+        "registry.terraform.io",
+        "releases.hashicorp.com",
+        "checkpoint-api.hashicorp.com",
+        "proxy.golang.org",
+        "sum.golang.org",
+        "storage.googleapis.com",
+        "rubygems.org"
       ]
     },
     "excludedCommands": [
