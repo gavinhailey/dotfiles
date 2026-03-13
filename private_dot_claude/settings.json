@@ -6,7 +6,7 @@
   "statusLine": {
     "type": "command", 
     "command": "~/.claude/ccline/ccline",
-    "padding": 5
+    "padding": 0
   },
   "permissions": {
     "allow": [
