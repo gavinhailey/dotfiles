@@ -3,6 +3,11 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "_ZO_DOCTOR": "0"
   },
+  "statusLine": {
+    "type": "command", 
+    "command": "~/.claude/ccline/ccline",
+    "padding": 5
+  },
   "permissions": {
     "allow": [
       "Grep",
