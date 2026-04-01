@@ -1,12 +1,8 @@
 {
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_NO_FLICKER": "1",
     "_ZO_DOCTOR": "0"
-  },
-  "statusLine": {
-    "type": "command", 
-    "command": "~/.claude/ccline/ccline",
-    "padding": 0
   },
   "permissions": {
     "allow": [
@@ -26,7 +22,6 @@
       "Bash(gh:*)"
     ]
   },
-  "model": "opus",
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
@@ -36,7 +31,16 @@
     "typescript-lsp@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "compound-engineering@every-marketplace": true,
-    "gopls-lsp@claude-plugins-official": true
+    "gopls-lsp@claude-plugins-official": true,
+    "claude-hud@claude-hud": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-hud": {
+      "source": {
+        "source": "github",
+        "repo": "jarrodwatts/claude-hud"
+      }
+    }
   },
   "sandbox": {
     "enabled": true,
@@ -58,13 +62,13 @@
         "rubygems.org"
       ]
     },
-    "excludedCommands": [
-      "acli*",
-      "gh*"
-    ]
+    "excludedCommands": ["acli*", "gh*"]
   },
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
-  "effortLevel": "high"
+  "statusLine": {
+    "type": "command",
+    "command": "bash -c 'plugin_dir=$(ls -d \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | awk -F/ '\"'\"'{ print $(NF-1) \"\\t\" $(0) }'\"'\"' | sort -t. -k1,1n -k2,2n -k3,3n -k4,4n | tail -1 | cut -f2-); exec \"/Users/gavin.hailey/.bun/bin/bun\" --env-file /dev/null \"${plugin_dir}src/index.ts\"'"
+  }
 }
-
