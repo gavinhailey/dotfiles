@@ -13,11 +13,11 @@ zstyle ':omz:update' mode disabled
 ENABLE_CORRECTION="false" 
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if eq .chezmoi.os "darwin" -}}
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-{{ else if eq .chezmoi.os "linux" -}}
+{{- else if eq .chezmoi.os "linux" -}}
 source /usr/share/zsh-antidote/antidote.zsh
-{{ end -}}
+{{- end -}}
 antidote load
 
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
@@ -60,7 +60,6 @@ alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
-### saml2aws
 alias docker-login='assume monolith-production:DomainEngineer -- aws ecr get-login-password | docker login --password-stdin --username AWS 264606497040.dkr.ecr.us-east-1.amazonaws.com'
 
 ### colima
@@ -111,7 +110,7 @@ export AWS_REGION=us-east-1
 
 ### path stuffs
 export PATH="$HOME/.local/bin:$PATH"
-{{ if ne .chezmoi.os "darwin" -}}
+{{- if ne .chezmoi.os "darwin" -}}
 export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
@@ -119,7 +118,7 @@ export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 export PATH="$(brew --prefix libpq)/bin:$PATH"
 export PATH="$HOME/.moon/bin:$PATH"
 export PATH="$(brew --prefix llvm@21)/bin:$PATH"
-{{ end -}}
+{{- end }}
 
 ## completions 
 
