@@ -111,7 +111,7 @@ export AWS_REGION=us-east-1
 
 ### path stuffs
 export PATH="$HOME/.local/bin:$PATH"
-{{ if ne .chezmoi.os "darwin" }}
+{{ if ne .chezmoi.os "darwin" -}}
 export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
@@ -119,7 +119,7 @@ export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 export PATH="$(brew --prefix libpq)/bin:$PATH"
 export PATH="$HOME/.moon/bin:$PATH"
 export PATH="$(brew --prefix llvm@21)/bin:$PATH"
-{{ end }}
+{{ end -}}
 
 ## completions 
 
@@ -178,7 +178,11 @@ if [ -f "~/.deno/env"]; then
 fi
 
 # pnpm
-export PNPM_HOME="/Users/gavin.hailey/Library/pnpm"
+{{ if ne .chezmoi.os "darwin" -}}
+export PNPM_HOME="~/Library/pnpm"
+{{ else if eq .chezmoi.os "linux" -}}
+export PNPM_HOME="~/.local/share/pnpm"
+{{end -}}
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
