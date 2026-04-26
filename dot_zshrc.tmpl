@@ -59,7 +59,7 @@ alias zshrc="chezmoi edit ~/.zshrc --apply"
 
 alias docker-login='assume monolith-production:DomainEngineer -- aws ecr get-login-password | docker login --password-stdin --username AWS 264606497040.dkr.ecr.us-east-1.amazonaws.com'
 
-{{ if and (eq .chezmoi.os "linux") (eq .host "work") -}} 
+{{- if and (eq .chezmoi.os "linux") (eq .host "work") -}} 
 ### colima
 export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
 export DOCKER_API_VERSION=1.43
