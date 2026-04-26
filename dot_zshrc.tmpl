@@ -20,9 +20,6 @@ source /usr/share/zsh-antidote/antidote.zsh
 {{- end -}}
 antidote load
 
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-antidote load
-
 if [[ "$(uname)" == "Darwin" ]]; then 
   zvm_after_init_commands+=('source <(fzf --zsh) ') # MacOS
 else
