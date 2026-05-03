@@ -2,6 +2,8 @@
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_NO_FLICKER": "1",
+    "ENABLE_CLAUDEAI_MCP_SERVERS": "false",
+    "ENABLE_TOOL_SEARCH": "true",
     "_ZO_DOCTOR": "0"
   },
   "permissions": {
@@ -20,7 +22,26 @@
       "Task",
       "Bash(acli:*)",
       "Bash(gh:*)"
+    ],
+    "defaultMode": "auto"
+  },
+  "model": "opus[1m]",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/gavin.hailey/.claude/hooks/rtk-rewrite.sh"
+          }
+        ]
+      }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash -c 'plugin_dir=$(ls -d \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | awk -F/ '\"'\"'{ print $(NF-1) \"\\t\" $(0) }'\"'\"' | sort -t. -k1,1n -k2,2n -k3,3n -k4,4n | tail -1 | cut -f2-); exec \"/Users/gavin.hailey/.bun/bin/bun\" --env-file /dev/null \"${plugin_dir}src/index.ts\"'"
   },
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true,
@@ -32,13 +53,30 @@
     "superpowers@claude-plugins-official": true,
     "compound-engineering@every-marketplace": true,
     "gopls-lsp@claude-plugins-official": true,
-    "claude-hud@claude-hud": true
+    "claude-hud@claude-hud": true,
+    "caveman@caveman": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "code-review@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-hud": {
       "source": {
         "source": "github",
         "repo": "jarrodwatts/claude-hud"
+      },
+      "autoUpdate": true
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      },
+      "autoUpdate": true
+    },
+    "ui-ux-pro-max-skill": {
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
       }
     }
   },
@@ -62,13 +100,13 @@
         "rubygems.org"
       ]
     },
-    "excludedCommands": ["acli*", "gh*"]
+    "excludedCommands": [
+      "acli*",
+      "gh*"
+    ]
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
-  "statusLine": {
-    "type": "command",
-    "command": "bash -c 'plugin_dir=$(ls -d \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | awk -F/ '\"'\"'{ print $(NF-1) \"\\t\" $(0) }'\"'\"' | sort -t. -k1,1n -k2,2n -k3,3n -k4,4n | tail -1 | cut -f2-); exec \"/Users/gavin.hailey/.bun/bin/bun\" --env-file /dev/null \"${plugin_dir}src/index.ts\"'"
-  }
+  "skipAutoPermissionPrompt": true
 }
