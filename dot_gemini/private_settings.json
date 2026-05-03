@@ -1,11 +1,10 @@
 {
-  "selectedAuthType": "gemini-api-key",
-  "theme": "Default",
-  "contextFileName": "AGENTS.md",
-  "checkpointing": {
-    "enabled": true
+  "tools": {
+    "autoAccept": true
   },
-  "autoAccept": true,
+  "context": {
+    "fileName": "AGENTS.md"
+  },
   "mcpServers": {
     "sequential-thinking": {
       "command": "npx",
@@ -33,29 +32,7 @@
         "ghcr.io/github/github-mcp-server"
       ],
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PAT}"
-      }
-    },
-    "jetbrains": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@jetbrains/mcp-proxy"
-      ]
-    },
-    "atlassian": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://mcp.atlassian.com/v1/sse"
-      ]
-    },
-    "aws-terraform": {
-      "command": "uvx",
-      "args": ["awslabs.terraform-mcp-server@latest"],
-      "env": {
-        "FASTMCP_LOG_LEVEL": "ERROR"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
     },
     "terraform": {
@@ -67,5 +44,36 @@
         "hashicorp/terraform-mcp-server"
       ]
     }
+  },
+  "security": {
+    "auth": {
+      "selectedType": "gemini-api-key"
+    }
+  },
+  "ui": {
+    "theme": "Tokyo Night"
+  },
+  "general": {
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "30d",
+      "warningAcknowledged": true
+    }
+  },
+  "ide": {
+    "hasSeenNudge": true
+  },
+  "hooks": {
+    "BeforeTool": [
+      {
+        "matcher": "run_shell_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/gavin.hailey/.gemini/hooks/rtk-hook-gemini.sh"
+          }
+        ]
+      }
+    ]
   }
 }
