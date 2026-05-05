@@ -58,7 +58,7 @@ alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
 
-{{- if eq .host "work" -}} 
+{{ if eq .host "work" -}} 
 ### colima
 export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
 export DOCKER_API_VERSION=1.43
