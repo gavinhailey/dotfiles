@@ -109,7 +109,7 @@ export AWS_REGION=us-east-1
 
 ### path stuffs
 export PATH="$HOME/.local/bin:$PATH"
-{{- if eq .chezmoi.os "darwin" -}}
+{{if eq .chezmoi.os "darwin" -}}
 export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
