@@ -89,10 +89,9 @@ export GOOGLE_API_KEY=$(keychain-environment-variable GEMINI_API_KEY)
 export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
 export ATLASSIAN_PAT=$(keychain-environment-variable ATLASSIAN_PAT_P1)$(keychain-environment-variable ATLASSIAN_PAT_P2)
 export ATLASSIAN_USERNAME=$(keychain-environment-variable ATLASSIAN_USERNAME)
+export JIRA_API_TOKEN=${ATLASSIAN_PAT}
 export JIRA_URL=$(keychain-environment-variable ATLASSIAN_URL)
 export CONFLUENCE_URL=$(keychain-environment-variable ATLASSIAN_URL)/wiki
-# export ANTHROPIC_AUTH_TOKEN=$(keychain-environment-variable DATABRICKS_TOKEN)
-# export ANTHROPIC_BASE_URL=$(keychain-environment-variable DATABRICKS_SERVING_ENDPOINT)
 export CONTEXT7_API_KEY=$(keychain-environment-variable CONTEXT7_API_KEY)
 {{- end }}
 
