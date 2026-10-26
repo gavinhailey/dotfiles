@@ -6,9 +6,6 @@ tap "datadog-labs/pack", "https://github.com/datadog-labs/homebrew-pack.git", tr
 tap "derailed/k9s", trusted: true
 tap "goreleaser/tap", trusted: true
 tap "hashicorp/tap", trusted: true
-tap "homebrew/bundle"
-tap "jandedobbeleer/oh-my-posh", trusted: true
-tap "knative-extensions/kn-plugins", trusted: true
 tap "knative/client"
 tap "manaflow-ai/cmux", trusted: true
 tap "ngrok/ngrok", trusted: true
@@ -16,7 +13,7 @@ tap "norwoodj/tap", trusted: true
 tap "pete911/tap", trusted: true
 tap "skyscanner/tools", trusted: true
 tap "speakeasy-api/tap", trusted: true
-tap "turbot/tap", trusted: true
+tap "terraform-linters/tap", trusted: true
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
 # GitOps Continuous Delivery for Kubernetes
@@ -27,8 +24,6 @@ brew "asciinema"
 brew "ast-grep"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Library for command-line editing
 brew "readline"
 # General-purpose data compression with high compression ratio
@@ -41,8 +36,6 @@ brew "bash"
 brew "bat"
 # Arbitrary precision numeric processing language
 brew "bc"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@78"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Secure and free password manager for all of your devices
@@ -55,8 +48,6 @@ brew "cargo-audit"
 brew "ccache"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
-# Make choices on the command-line
-brew "choose"
 # Statistics utility to count lines of code
 brew "cloc"
 # Cross-platform make
@@ -85,8 +76,6 @@ brew "docker-buildx"
 brew "docker-compose"
 # Platform keystore credential helper for Docker
 brew "docker-credential-helper"
-# Command-line DNS client
-brew "dog"
 # More intuitive version of du in rust
 brew "dust"
 # Modern, maintained replacement for ls
@@ -149,6 +138,8 @@ brew "helm"
 brew "htop"
 # Command-line benchmarking tool
 brew "hyperfine"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@78"
 # Manage your Java environment
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
@@ -195,6 +186,8 @@ brew "ripgrep"
 brew "opencode"
 # OpenBSD freely-licensed SSH connectivity tools
 brew "openssh"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Shell command parallelization utility
@@ -223,6 +216,8 @@ brew "rtk"
 brew "ruby"
 # Markdown Linter and Formatter written in Rust
 brew "rumdl"
+# Safe, concurrent, practical language
+brew "rust"
 # Used as a compiler wrapper and avoids compilation when possible
 brew "sccache"
 # Command-line interface for https://speedtest.net bandwidth tests
@@ -239,10 +234,6 @@ brew "stow"
 brew "tcl-tk"
 # Terraform version manager inspired by rbenv
 brew "tfenv"
-# Linter for Terraform files
-brew "tflint"
-# Simplified and community-driven man pages
-brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -272,29 +263,20 @@ brew "zoxide"
 # Tabular data swiss-army knife CLI
 brew "zsv"
 # Software to interact with Atlassian Cloud from the terminal
-brew "atlassian/acli/acli"
-# The best way of working with Protocol Buffers.
-brew "bufbuild/buf/buf"
+brew "atlassian/acli/acli", trusted: true
 # The easiest way to access your cloud.
-brew "common-fate/granted/granted"
+brew "common-fate/granted/granted", trusted: true
 # The kubectx for operators.
-brew "danielfoehrkn/switch/switch"
+brew "danielfoehrkn/switch/switch", trusted: true
 # Kubernetes CLI To Manage Your Clusters In Style!
-brew "derailed/k9s/k9s"
-brew "knative-extensions/kn-plugins/admin", trusted: true
-brew "knative-extensions/kn-plugins/func"
-brew "knative-extensions/kn-plugins/quickstart", trusted: true
+brew "derailed/k9s/k9s", trusted: true
 brew "knative/client/kn", trusted: true
 # Automatically generate markdown documentation for helm charts
-brew "norwoodj/tap/helm-docs"
+brew "norwoodj/tap/helm-docs", trusted: true
 # Simple tool to help apply changes across many GitHub repositories simultaneously
-brew "skyscanner/tools/turbolift"
+brew "skyscanner/tools/turbolift", trusted: true
 # The Speakeasy CLI for interacting with the Speakeasy Platform
-brew "speakeasy-api/tap/speakeasy"
-# Compact TeX distribution as alternative to the full TeX Live / MacTeX
-cask "basictex"
-# Menu bar app for monitoring AI coding assistant usage quotas
-cask "claudebar"
+brew "speakeasy-api/tap/speakeasy", trusted: true
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
 cask "font-fira-code-nerd-font"
@@ -304,36 +286,14 @@ cask "font-monaspice-nerd-font"
 cask "font-noto-sans-symbols-2"
 cask "font-ubuntu-mono-nerd-font"
 cask "font-ubuntu-nerd-font"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
 # Release engineering, simplified
-cask "goreleaser/tap/goreleaser"
-# Clipboard manager
-cask "maccy"
-# Open-source software for live streaming and screen recording
-cask "obs"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
-# Move and resize windows using keyboard shortcuts or snap areas
-cask "rectangle"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
-# Multiplayer code editor
-cask "zed"
-# Gecko based web browser
-cask "zen"
-go "cmd/go"
-go "cmd/gofmt"
+cask "goreleaser/tap/goreleaser", trusted: true
 cargo "drill"
 cargo "fd-find"
-cargo "ipn-lambda-power-tuner"
 cargo "jwt-cli"
 cargo "loc"
 cargo "oha"
 cargo "tfmcp"
 cargo "tokensave"
-cargo "trippy"
-npm "@google/gemini-cli"
-npm "corepack"
 npm "scriptc"
 npm "skills"
