@@ -108,6 +108,19 @@ export AWS_DEFAULT_REGION=us-east-1
 export AWS_SESSION_TTL=12h
 export AWS_REGION=us-east-1
 
+### xdg
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+### redirect to xdg
+export SQLITE_HISTORY=$XDG_STATE_HOME/sqlite_history
+export LESSHISTFILE=$XDG_STATE_HOME/less_history
+export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
+export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
+export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+
 ### path stuffs
 export PATH="$HOME/.local/bin:$PATH"
 {{if eq .chezmoi.os "darwin" -}}
