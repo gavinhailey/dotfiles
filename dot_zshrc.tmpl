@@ -58,14 +58,12 @@ alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
 
-{{ if eq .host "work" -}} 
+{{- if eq .host "ibotta" }}
 ### colima
 export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
 export DOCKER_API_VERSION=1.43
-{{- end }}
 
 ### credentials
-{{- if eq .host "work" }}
 export ARTIFACTORY_USER=$(keychain-environment-variable ARTIFACTORY_USER)
 export ARTIFACTORY_TOKEN=$(keychain-environment-variable ARTIFACTORY_TOKEN)
 export NPM_BASE=$(keychain-environment-variable NPM_BASE)
@@ -96,6 +94,10 @@ export CONTEXT7_API_KEY=$(keychain-environment-variable CONTEXT7_API_KEY)
 {{- end }}
 
 {{- if eq .host "personal" }}
+
+{{- end }}
+
+{{- if eq .host "work" }}
 
 {{- end }}
 
