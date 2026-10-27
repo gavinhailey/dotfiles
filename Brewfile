@@ -1,18 +1,11 @@
 tap "atlassian/acli", trusted: true
-tap "bufbuild/buf", trusted: true
-tap "common-fate/granted", trusted: true
-tap "danielfoehrkn/switch", trusted: true
+tap "fwdcloudsec/granted", trusted: true
 tap "datadog-labs/pack", "https://github.com/datadog-labs/homebrew-pack.git", trusted: true
 tap "derailed/k9s", trusted: true
 tap "goreleaser/tap", trusted: true
 tap "hashicorp/tap", trusted: true
-tap "knative/client"
-tap "manaflow-ai/cmux", trusted: true
-tap "ngrok/ngrok", trusted: true
 tap "norwoodj/tap", trusted: true
-tap "pete911/tap", trusted: true
 tap "skyscanner/tools", trusted: true
-tap "speakeasy-api/tap", trusted: true
 tap "terraform-linters/tap", trusted: true
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
@@ -265,20 +258,13 @@ brew "zsv"
 # Software to interact with Atlassian Cloud from the terminal
 brew "atlassian/acli/acli", trusted: true
 # The easiest way to access your cloud.
-brew "common-fate/granted/granted", trusted: true
-# The kubectx for operators.
-brew "danielfoehrkn/switch/switch", trusted: true
+brew "fwdcloudsec/granted/granted", trusted: true
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s", trusted: true
-brew "knative/client/kn", trusted: true
 # Automatically generate markdown documentation for helm charts
 brew "norwoodj/tap/helm-docs", trusted: true
 # Simple tool to help apply changes across many GitHub repositories simultaneously
 brew "skyscanner/tools/turbolift", trusted: true
-# The Speakeasy CLI for interacting with the Speakeasy Platform
-brew "speakeasy-api/tap/speakeasy", trusted: true
-# Brings the power of Copilot coding agent directly to your terminal
-cask "copilot-cli"
 cask "font-fira-code-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-lg-nerd-font"
@@ -297,3 +283,4 @@ cargo "tfmcp"
 cargo "tokensave"
 npm "scriptc"
 npm "skills"
+
