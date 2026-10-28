@@ -61,6 +61,7 @@ alias zshrc="chezmoi edit ~/.zshrc --apply"
 ### credentials
 export ARTIFACTORY_USER=$(keychain-environment-variable ARTIFACTORY_USER)
 export ARTIFACTORY_TOKEN=$(keychain-environment-variable ARTIFACTORY_TOKEN)
+export JFROG_ACCESS_TOKEN=$ARTIFACTORY_TOKEN
 export NPM_REPO_USERNAME=$(keychain-environment-variable ARTIFACTORY_USER)
 export NPM_REPO_PASSWORD=$(keychain-environment-variable ARTIFACTORY_TOKEN)
 export NPM_REPO_LOGIN="${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}"
