@@ -57,7 +57,7 @@ alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
-{{- if eq .host "ibotta" }}
+{{- if eq .host "work" }}
 ### credentials
 export ARTIFACTORY_USER=$(keychain-environment-variable ARTIFACTORY_USER)
 export ARTIFACTORY_TOKEN=$(keychain-environment-variable ARTIFACTORY_TOKEN)
