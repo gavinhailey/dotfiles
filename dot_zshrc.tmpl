@@ -61,31 +61,20 @@ alias zshrc="chezmoi edit ~/.zshrc --apply"
 ### credentials
 export ARTIFACTORY_USER=$(keychain-environment-variable ARTIFACTORY_USER)
 export ARTIFACTORY_TOKEN=$(keychain-environment-variable ARTIFACTORY_TOKEN)
-export NPM_BASE=$(keychain-environment-variable NPM_BASE)
 export NPM_REPO_USERNAME=$(keychain-environment-variable ARTIFACTORY_USER)
 export NPM_REPO_PASSWORD=$(keychain-environment-variable ARTIFACTORY_TOKEN)
 export NPM_REPO_LOGIN="${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}"
 export GEM_REPO_LOGIN="${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}"
 export MVN_REPO_LOGIN="${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}"
-export POETRY_HTTP_BASIC_IBPYPI_USERNAME=$(keychain-environment-variable ARTIFACTORY_USER)
-export POETRY_HTTP_BASIC_IBPYPI_PASSWORD=$(keychain-environment-variable ARTIFACTORY_TOKEN)
-export RUNSCOPE_TOKEN=$(keychain-environment-variable RUNSCOPE_PAT)
-export RUNSCOPE_ACCESS_TOKEN=$(keychain-environment-variable RUNSCOPE_PAT)
-export RUNSCOPE_TEAM_ID=$(keychain-environment-variable RUNSCOPE_TEAM_ID)
-export GITHUB_PERSONAL_ACCESS_TOKEN=$(keychain-environment-variable GITHUB_TOKEN)
-export DD_API_KEY=$(keychain-environment-variable DD_API_KEY)
-export DD_APP_KEY=$(keychain-environment-variable DD_APP_KEY)
-export DATABRICKS_TOKEN=$(keychain-environment-variable DATABRICKS_TOKEN)
-export GEMINI_API_KEY=$(keychain-environment-variable GEMINI_API_KEY)
-export GOOGLE_API_KEY=$(keychain-environment-variable GEMINI_API_KEY)
+export DD_PAT=$(keychain-environment-variable DD_PAT)
 export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
-export ATLASSIAN_PAT=$(keychain-environment-variable ATLASSIAN_PAT_P1)$(keychain-environment-variable ATLASSIAN_PAT_P2)
+export GIT_PAT_TOKEN=$(gh auth token)
+export ATLASSIAN_API_TOKEN=$(keychain-environment-variable ATLASSIAN_PAT_P1)$(keychain-environment-variable ATLASSIAN_PAT_P2)
 export ATLASSIAN_USERNAME=$(keychain-environment-variable ATLASSIAN_USERNAME)
 export JIRA_EMAIL=${ATLASSIAN_USERNAME}
 export JIRA_API_TOKEN=${ATLASSIAN_PAT}
 export JIRA_URL=$(keychain-environment-variable ATLASSIAN_URL)
 export CONFLUENCE_URL=$(keychain-environment-variable ATLASSIAN_URL)/wiki
-export CONTEXT7_API_KEY=$(keychain-environment-variable CONTEXT7_API_KEY)
 {{- end }}
 
 {{- if eq .host "personal" }}
