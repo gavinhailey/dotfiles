@@ -1,7 +1,7 @@
 tap "atlassian/acli", trusted: true
-tap "fwdcloudsec/granted", trusted: true
 tap "datadog-labs/pack", "https://github.com/datadog-labs/homebrew-pack.git", trusted: true
 tap "derailed/k9s", trusted: true
+tap "fwdcloudsec/granted", trusted: true
 tap "goreleaser/tap", trusted: true
 tap "hashicorp/tap", trusted: true
 tap "norwoodj/tap", trusted: true
@@ -235,6 +235,8 @@ brew "tree"
 brew "tree-sitter-cli"
 # Tool for working with usage-spec CLIs
 brew "usage"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # High-performance data structure server that primarily serves key/value workloads
 brew "valkey", restart_service: :changed
 # Internet file retriever
@@ -256,15 +258,17 @@ brew "zoxide"
 # Tabular data swiss-army knife CLI
 brew "zsv"
 # Software to interact with Atlassian Cloud from the terminal
-brew "atlassian/acli/acli", trusted: true
-# The easiest way to access your cloud.
-brew "fwdcloudsec/granted/granted", trusted: true
+brew "atlassian/acli/acli"
 # Kubernetes CLI To Manage Your Clusters In Style!
-brew "derailed/k9s/k9s", trusted: true
+brew "derailed/k9s/k9s"
+# Easiest way to access your cloud
+brew "fwdcloudsec/granted/granted", trusted: true
 # Automatically generate markdown documentation for helm charts
-brew "norwoodj/tap/helm-docs", trusted: true
+brew "norwoodj/tap/helm-docs"
 # Simple tool to help apply changes across many GitHub repositories simultaneously
-brew "skyscanner/tools/turbolift", trusted: true
+brew "skyscanner/tools/turbolift"
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli"
 cask "font-fira-code-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-lg-nerd-font"
@@ -273,7 +277,7 @@ cask "font-noto-sans-symbols-2"
 cask "font-ubuntu-mono-nerd-font"
 cask "font-ubuntu-nerd-font"
 # Release engineering, simplified
-cask "goreleaser/tap/goreleaser", trusted: true
+cask "goreleaser/tap/goreleaser"
 cargo "drill"
 cargo "fd-find"
 cargo "jwt-cli"
@@ -283,4 +287,3 @@ cargo "tfmcp"
 cargo "tokensave"
 npm "scriptc"
 npm "skills"
-
