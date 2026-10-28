@@ -57,12 +57,7 @@ alias gg-dependabot="gh combine-prs --query 'author:app/dependabot'"
 alias epoch="date +%s"
 alias zshrc="chezmoi edit ~/.zshrc --apply"
 
-
 {{- if eq .host "ibotta" }}
-### colima
-export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
-export DOCKER_API_VERSION=1.43
-
 ### credentials
 export ARTIFACTORY_USER=$(keychain-environment-variable ARTIFACTORY_USER)
 export ARTIFACTORY_TOKEN=$(keychain-environment-variable ARTIFACTORY_TOKEN)
@@ -94,11 +89,6 @@ export CONTEXT7_API_KEY=$(keychain-environment-variable CONTEXT7_API_KEY)
 {{- end }}
 
 {{- if eq .host "personal" }}
-
-{{- end }}
-
-{{- if eq .host "work" }}
-
 {{- end }}
 
 ### aws qol
@@ -119,6 +109,12 @@ export SQLITE_HISTORY=$XDG_STATE_HOME/sqlite_history
 export LESSHISTFILE=$XDG_STATE_HOME/less_history
 export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
 export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
+
+
+{{- if eq .host "work" }}
+export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
+export SSL_CERT_FILE=$XDG_DATA_HOME/ca-certificates/zscaler.crt
+{{- end }}
 
 ### path stuffs
 export PATH="$HOME/.local/bin:$PATH"
