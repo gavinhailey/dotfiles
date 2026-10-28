@@ -112,7 +112,6 @@ export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 
 
 {{- if eq .host "work" }}
-export DOCKER_HOST=unix:///$HOME/.colima/docker.sock
 export SSL_CERT_FILE=$XDG_DATA_HOME/ca-certificates/zscaler.crt
 {{- end }}
 
