@@ -71,6 +71,11 @@ export DD_PAT=$(keychain-environment-variable DD_PAT)
 export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
 export GITHUB_PERSONAL_ACCESS_TOKEN=$(gh auth token)
 export GIT_PAT_TOKEN=$(gh auth token)
+export JENKINS_URL=$(keychain-environment-variable JENKINS_URL)
+export JENKINS_USER=$(keychain-environment-variable JENKINS_USER)
+export JENKINS_TOKEN=$(keychain-environment-variable JENKINS_TOKEN)
+
+# Atlassian
 export ATLASSIAN_API_TOKEN=$(keychain-environment-variable ATLASSIAN_PAT_P1)$(keychain-environment-variable ATLASSIAN_PAT_P2)
 export ATLASSIAN_USERNAME=$(keychain-environment-variable ATLASSIAN_USERNAME)
 export JIRA_EMAIL=${ATLASSIAN_USERNAME}
