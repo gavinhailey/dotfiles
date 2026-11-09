@@ -1,6 +1,11 @@
+{{- if eq .chezmoi.os "darwin" -}}
 eval $(/opt/homebrew/bin/brew shellenv)
+{{- end -}}
 
-{{- if eq .host "personal" }}
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
-{{- end }}
+{{- if eq .chezmoi.os "linux" -}}
+export BROWSER=/var/lib/flatpak/exports/bin/app.zen_browser.zen
+export TERM=ghostty
+export QT_QPA_PLATFORMTHEME="qt5ct"
+. "$HOME/.cargo/env"
+{{- end -}}
 
