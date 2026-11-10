@@ -1,14 +1,8 @@
 {{- if eq .host "work" }}
-Include /Users/gavin.hailey/.colima/ssh_config
-
 Host github.com
   User git
   AddKeysToAgent yes
   HostName github.com
   IdentityFile ~/.ssh/id_ed25519
-{{- end }}
-
-{{- if eq .host "personal" }}
-Include ~/.orbstack/ssh/config
 {{- end }}
 
