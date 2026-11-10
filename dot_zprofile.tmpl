@@ -1,4 +1,5 @@
 {{- if eq .chezmoi.os "darwin" -}}
+export PATH="$PATH:$HOME/.docker/bin"
 eval $(/opt/homebrew/bin/brew shellenv)
 {{- end -}}
 
