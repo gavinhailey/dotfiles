@@ -9,7 +9,10 @@
     "allow": [
       "Bash(gh:*)",
       "Edit(~/.agents/**)",
-      "Edit(~/.claude/**)",
+      "Edit(~/.claude/settings.json)",
+      {{- if eq .host "work" }}
+      "Edit(~/galaxy/**)",
+      {{- end }}
       "Glob",
       "Grep",
       "Read",
