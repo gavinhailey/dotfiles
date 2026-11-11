@@ -1,6 +1,8 @@
 tap "atlassian/acli", trusted: true
+tap "danielfoehrkn/switch", trusted: { formulae: ["switcher"] }
 tap "datadog-labs/pack", "https://github.com/datadog-labs/homebrew-pack.git", trusted: true
 tap "derailed/k9s", trusted: true
+tap "fluxcd/tap"
 tap "fwdcloudsec/granted", trusted: true
 tap "goreleaser/tap", trusted: true
 tap "hashicorp/tap", trusted: true
@@ -93,6 +95,8 @@ brew "git-delta"
 brew "git-filter-repo"
 # Open-source GitLab command-line tool
 brew "glab"
+# Render markdown on the CLI
+brew "glow"
 # Command-line option parsing utility
 brew "gnu-getopt"
 # GNU implementation of the famous stream editor
@@ -123,10 +127,16 @@ brew "libtool"
 brew "graphviz"
 # GNU grep, egrep and fgrep
 brew "grep"
+# Java-based scripting language
+brew "groovy"
 # System monitoring dashboard for terminal
 brew "gtop"
 # Kubernetes package manager
 brew "helm"
+# Tool for working with usage-spec CLIs
+brew "usage"
+# Git hook and pre-commit lint manager
+brew "hk"
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
@@ -135,6 +145,8 @@ brew "hyperfine"
 brew "icu4c@78"
 # Manage your Java environment
 brew "jenv"
+# Command-line interface for JFrog products
+brew "jfrog-cli"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Domain specific configuration language for defining JSON data
@@ -145,6 +157,8 @@ brew "just"
 brew "k6"
 # Run local Kubernetes cluster in Docker
 brew "kind"
+# FAST Kubernetes manifests validator, with support for Custom Resources!
+brew "kubeconform"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
@@ -233,8 +247,6 @@ brew "tmux"
 brew "tree"
 # Parser generator tool
 brew "tree-sitter-cli"
-# Tool for working with usage-spec CLIs
-brew "usage"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # High-performance data structure server that primarily serves key/value workloads
@@ -259,8 +271,12 @@ brew "zoxide"
 brew "zsv"
 # Software to interact with Atlassian Cloud from the terminal
 brew "atlassian/acli/acli"
+# The kubectx for operators.
+brew "danielfoehrkn/switch/switch", trusted: true
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
+# CLI for GitOps continuous delivery
+brew "fluxcd/tap/flux", trusted: true
 # Easiest way to access your cloud
 brew "fwdcloudsec/granted/granted", trusted: true
 # Automatically generate markdown documentation for helm charts
