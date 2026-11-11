@@ -20,11 +20,7 @@ source /usr/share/zsh-antidote/antidote.zsh
 {{- end}}
 antidote load
 
-if [[ "$(uname)" == "Darwin" ]]; then 
-  zvm_after_init_commands+=('source <(fzf --zsh) ') # MacOS
-else
-  zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh') # Linux
-fi
+zvm_after_init_commands+=('source <(fzf --zsh)')
 
 export GPG_TTY=$(tty)
 
