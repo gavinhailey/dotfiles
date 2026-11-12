@@ -5,8 +5,10 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 {{- if eq .chezmoi.os "linux" -}}
 export BROWSER=/var/lib/flatpak/exports/bin/app.zen_browser.zen
-export TERM=ghostty
 export QT_QPA_PLATFORMTHEME="qt5ct"
 . "$HOME/.cargo/env"
+if uwsm check may-start; then
+    exec uwsm start hyprland.desktop
+fi
 {{- end -}}
 
